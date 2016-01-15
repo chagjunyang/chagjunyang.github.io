@@ -1,0 +1,37 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: pygments
+markdown: kramdown
+disqus: joyhan
+google_analytics: joyhan
+title: joyhan
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: joyhan Blog
+
+description: Stylish Jekyll Theme
+author:
+  name: joyhan
+  email: yyh910214@gmail.com
+  github: yyh910214
+#  twitter: none
+#  pinterest: asd123
+#  linkedin: asd123
+  bio: NHN ent. joyhan
+  email_md5: e646ce1d8980a3ec729cb6e0cac20154
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+BASE_PATH:
+
+gems:
+  - jekyll-pagination
