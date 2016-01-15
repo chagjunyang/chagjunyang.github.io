@@ -7,24 +7,24 @@ highlighter: pygments
 markdown: kramdown
 disqus: joyhan
 google_analytics: joyhan
-title: joyhan
+title: changjun
 
 defaults:
   -
     scope:
       path: "" # empty string for all files
     values:
-      title: joyhan Blog
+      title: changjun Blog
 
 description: Stylish Jekyll Theme
 author:
-  name: joyhan
-  email: yyh910214@gmail.com
-  github: yyh910214
+  name: chagjunyang
+  email: changjun4885@naver.com
+  github: changjun
 #  twitter: none
 #  pinterest: asd123
 #  linkedin: asd123
-  bio: NHN ent. joyhan
+  bio: NHN ent. changjun
   email_md5: e646ce1d8980a3ec729cb6e0cac20154
 
 rss_path: feed.xml
