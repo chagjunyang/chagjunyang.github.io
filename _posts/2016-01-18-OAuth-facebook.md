@@ -13,7 +13,7 @@ comments: true
 
 - 특정 사이트에 권한만 주어 ID/PWD를 직접 사이트에서 입력하지 않고 해당 인증기관을 거쳐 권한만 주기위함
 - 이런 작업을 표준화 하고 싶어 생긴 것 이 OAuth (비밀번호 인증방식의 문제점 해결하기 위함)
-- 최종적으로 access token만 발
+
 <img src="/assets/media/oauth_1.png">
 
 
