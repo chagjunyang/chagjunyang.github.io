@@ -12,8 +12,10 @@ comments: true
 ## 1. 트위터 연동 
 
 ### 트위터 API사용방식
-#### 1. 웹용 컴포넌트를 가져다 쓰는 방식 (Twitter for Websites)
-#### 2. 트위터 API를 직접 사용하는 방식 (REST/Stream API)
+
+###1. 웹용 컴포넌트를 가져다 쓰는 방식 (Twitter for Websites)
+
+###2. 트위터 API를 직접 사용하는 방식 (REST/Stream API)
 
 #### 트위터등록
 - https://apps.twitter.com/app/ 에서 등록

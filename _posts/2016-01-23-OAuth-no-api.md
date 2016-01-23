@@ -8,10 +8,17 @@ comments: true
 ---
 
 # Spring Oauth without libaries
+
 ## get requestToken
+
 [예제](https://twittercommunity.com/t/solved-java-oauth-request-token-flow-example-without-libraries/1440/9)
+
 [OAth anchor](http://oauth.net/core/1.0/#anchor9)
+
+<br/>
+
 ### Requset call example 
+
 >
 	Example Result
 	Request URL:
