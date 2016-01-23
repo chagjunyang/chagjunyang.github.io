@@ -3,7 +3,7 @@ layout: post
 title: OAuth 1.0 (without OAuth API)
 categories: [개인]
 tags: [정보]
-description: test
+description: 
 comments: true
 ---
 
@@ -21,12 +21,6 @@ RFC가 좀 더 상세하나 ANCHOR도 좋은 듯
 - 여기서는 트위터를 대상으로 인증
 - 페이스북, 페이코는 2.0 지원 (다 개발하고서 알았따...)
 - 사용자 uid, profile_image_url, name 정보를 얻어오기 까지 과정들
-
-[OAth anchor](http://oauth.net/core/1.0/#anchor9)
-
-[OAuth RFC](https://tools.ietf.org/html/rfc5849#page-1)
-
-<br/>
 
 ### Requset call example 
 
@@ -50,7 +44,6 @@ RFC가 좀 더 상세하나 ANCHOR도 좋은 듯
 
 ### Collecting parameters [자료](https://dev.twitter.com/oauth/overview/authorizing-requests)
 
-</br>
 
 ### 1. Nonce 
 
@@ -64,7 +57,6 @@ RFC가 좀 더 상세하나 ANCHOR도 좋은 듯
         return uuid_string.replaceAll("-", "");
     }
 
-</br>
 
 ### 2. TimeStamp
 
@@ -77,7 +69,6 @@ RFC가 좀 더 상세하나 ANCHOR도 좋은 듯
         return new Long(ts / 1000).toString();
     }
 
-</br>
 
 ### 3. signature
 
@@ -112,7 +103,6 @@ RFC가 좀 더 상세하나 ANCHOR도 좋은 듯
     }
           
 
-</br>
 
 ### 4. encode
 
@@ -145,7 +135,6 @@ RFC가 좀 더 상세하나 ANCHOR도 좋은 듯
         return buf.toString();
     }
 
-</br>
 
 ### 5. send HTTP request
 
@@ -167,7 +156,6 @@ RFC가 좀 더 상세하나 ANCHOR도 좋은 듯
         return response.getBody();
     }
 
-</br>
 
 ### response에서 토큰 얻기
 
@@ -197,11 +185,9 @@ RFC가 좀 더 상세하나 ANCHOR도 좋은 듯
 
 - 아래 이미지는 트위터사이트에서 가져온 동작 순서이다
 
-<br/>
 
 <img src="/assets/media/twitter/oauth.png">
 
-<br/>
 
 ### 사용자 인증 받기
 
@@ -210,7 +196,6 @@ RFC가 좀 더 상세하나 ANCHOR도 좋은 듯
 - [자료](https://dev.twitter.com/oauth/reference/get/oauth/authenticate)
 - parameter로 force_login (자동 로그인 할 것인지) / screen_name 등 옵션으로 있다
 
-</br>
 
 ### Authorization Header
 
@@ -229,7 +214,6 @@ RFC가 좀 더 상세하나 ANCHOR도 좋은 듯
 - https://api.twitter.com/oauth/authorize?oauth_token=86-REQAAAAAAj99fAAABUm2vwBQ 이런 식으로 url요청 하면 앱 인증 화면으로 간다.
 - 여기서 콜백으로 등록한 곳으로 앱 호출
 
-</br>
 
 ### GetAccessToken
 
@@ -270,9 +254,17 @@ RFC가 좀 더 상세하나 ANCHOR도 좋은 듯
 
 - 다음은 응답의 결과로 access_token을 발급 받은 것 을 확인할 수 있다. 
 - 아직 포스팅 못한 OAuth RFC분석에서 볼 수 있겠지만 기존에 라이브러리 사용할 때 쓰던
-- RequestToken, AccessToken 등의 용어는 문서에서 확인할 수 없었다.
+- RequestToken, AccessToken 등의 
+- 는 문서에서 확인할 수 없었다.
 - 하지만 개념이 대응되서 더 쉽게 이해할 수 있었음
+- (나중에 찾아보니 2.0과 1.0의 용어 차이였음..)
  `oauth_token=4833688041-7mWgFX6sEHNappjRi0wfemrHMIXJpeFncdW8O7g&oauth_token_secret=Tj6vvv18wenIZqCzCFN19WLLGmv4IJBPJWo01vmgqUeAx&user_id=4833688041&screen_name=YangChangjun&x_auth_expires=0`
+
+
+<img src="/assets/media/twitter/oauth.png">
+
+- uid는 해당 oauth 서버에서 사용자를 식별하는 고유 값이다.
+- screen_name은 string형 고유값이다. 트위터에서 계정 명에 해당한다.
 
 ### 사용자 정보 얻기
 
