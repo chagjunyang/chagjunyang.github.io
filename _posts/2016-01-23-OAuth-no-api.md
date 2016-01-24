@@ -3,7 +3,7 @@ layout: post
 title: OAuth 1.0 (without OAuth API)
 categories: [개인]
 tags: [정보]
-description: 
+description: 트위터 uid, scree_name까지
 comments: true
 ---
 
