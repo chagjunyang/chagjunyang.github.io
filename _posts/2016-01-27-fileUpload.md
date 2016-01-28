@@ -3,7 +3,7 @@ layout: post
 title: Jquery, Ajax 파일 업로드 만들기
 categories: [개인]
 tags: [정보]
-description: 정리중
+description: 허접한 컴포넌트
 comments: true
 ---
 
@@ -370,12 +370,14 @@ comments: true
 - 자신이 원하는 타이밍의 이벤트 발생하면됨
 
 **동적으로 화면에 추가된 파일 리스트 출력**
+
 <img src="/assets/media/fileupload/2.png">
 
 - <div id=parent/> 최상위 노드에 자식으로 div만듬
 - 삭제 시 해당 div삭제 
 
 **파일선택 버튼 클릭**
+
 <img src="/assets/media/fileupload/3.png">
 
 - input type을 file로 함
@@ -384,7 +386,7 @@ comments: true
 
 ###결론
 
-- 여기저기 참고를 많이해서 참고링크는 없지만 직접 짠거라 문제될 시 삭제하겠습니다.
+- 여기저기 참고를 많이해서 참고링크는 없지만 style외 거의 직접 짠거라 문제될 시 삭제하겠습니다.
 - 파일 업로드 진행하면서 많은 공부가 되었음
 - 이런 허접한거 만드는데 15시간 이상 투자한듯
 - div로 파일명 리스트 추가하는데 삭제 시 부모로부터 속한 자식 `<div>`에서 삭제버튼이 속한 `<div>`의 index를 얻어오지 못해서 생성 시 id를 추가해줌 
