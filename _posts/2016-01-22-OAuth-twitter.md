@@ -7,8 +7,6 @@ description: spring mvc twitter login
 comments: true
 ---
 
-# 자바스크립트 트위터 연동
-
 ## 1. 트위터 연동 
 
 ### 트위터 API사용방식

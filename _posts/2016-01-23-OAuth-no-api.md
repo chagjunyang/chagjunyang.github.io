@@ -15,6 +15,8 @@ comments: true
 
 [OAuth RFC](https://tools.ietf.org/html/rfc5849#page-1)
 
+[네이버자료](http://d2.naver.com/helloworld/24942) -> 정리 잘됨 (나중에 찾음...후)
+
 RFC가 좀 더 상세하나 ANCHOR도 좋은 듯
 
 ## get requestToken 
