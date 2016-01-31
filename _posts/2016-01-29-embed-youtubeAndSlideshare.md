@@ -2,7 +2,7 @@
 layout: post
 title: TextArea youtube embed
 categories: [개인]
-tags: [공부] 
+tags: [정보] 
 description: 동적으로 iframe제공
 comments: true
 ---
@@ -85,6 +85,9 @@ comments: true
 ### 실행화면
 
 <img src="/assets/media/youtube.png">
+
+
+<img src="/assets/media/youtube2.png">
 
 1. https://www.youtube.com/watch?v=m_njhhMH6gM 형식 가능
 2. https://youtu.be/m_njhhMH6gM 형식 가능
