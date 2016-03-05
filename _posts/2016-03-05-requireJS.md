@@ -195,19 +195,19 @@ comments: true
 ### 6. 결과
 
 - 이전 articleDetail.jsp 코드
->
-	<script src="<c:url value='/js/jquery.min.js'/>"></script>
-	<script src="<c:url value='/bootstrap/js/bootstrap.min.js'/>" charset="utf-8"></script>
-	<script type="text/javascript" src="<c:url value='/toastui/pagination/js/code-snippet.js'/>"></script>
-    <script type="text/javascript" src="<c:url value='/toastui/scrollend/js/scrollend.min.js'/>"></script>
-	<script type="text/javascript" src="<c:url value='/js/article/search.js'/>" charset="utf-8"></script>
-	<script type="text/javascript" src="<c:url value='/js/ejs/ejs.js' />"></script>
-	<script type="text/javascript" src="<c:url value="/js/article/article.js" />"></script>
-	<script type="text/javascript" src="<c:url value="/js/comment/fileupload.js" />"></script>
-	<script type="text/javascript" src="<c:url value="/js/comment/comment.js" />"></script>
-	<script type="text/javascript" src="<c:url value="/js/comment/youtube.js" />"></script>
-	<script type="text/javascript" src="<c:url value="/js/comment/comments.js" />"></script>
-	<script type="text/javascript" src="<c:url value="/js/comment/eventHandler.js" />"></script>
+
+		<script src="<c:url value='/js/jquery.min.js'/>"></script>
+		<script src="<c:url value='/bootstrap/js/bootstrap.min.js'/>" charset="utf-8"></script>
+		<script type="text/javascript" src="<c:url value='/toastui/pagination/js/code-snippet.js'/>"></script>
+	    <script type="text/javascript" src="<c:url value='/toastui/scrollend/js/scrollend.min.js'/>"></script>
+		<script type="text/javascript" src="<c:url value='/js/article/search.js'/>" charset="utf-8"></script>
+		<script type="text/javascript" src="<c:url value='/js/ejs/ejs.js' />"></script>
+		<script type="text/javascript" src="<c:url value="/js/article/article.js" />"></script>
+		<script type="text/javascript" src="<c:url value="/js/comment/fileupload.js" />"></script>
+		<script type="text/javascript" src="<c:url value="/js/comment/comment.js" />"></script>
+		<script type="text/javascript" src="<c:url value="/js/comment/youtube.js" />"></script>
+		<script type="text/javascript" src="<c:url value="/js/comment/comments.js" />"></script>
+		<script type="text/javascript" src="<c:url value="/js/comment/eventHandler.js" />"></script>
 
 - `<script type="text/javascript" data-main='/js/main' src="/js/require.js"></script>` 한 줄로 깔끔해 졌다.
 - 하지만 `/js/main.js`의 require.config설정이 생겼고 여기가 좀 난해하다.
