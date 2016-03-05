@@ -131,24 +131,27 @@ comments: true
 	requirejs.config({
 	  baseUrl:'/js',
 	  paths : {
-		/*
-		* external js files
-		*/
+	    /*
+	    * external js files
+	    */
 	    'jquery': 'jquery.min',
 	    'bootstrap': '/bootstrap/js/bootstrap.min',
 	    'scrollend': '/toastui/scrollend/js/scrollend.min',
 	    'code-snippet': '/toastui/pagination/js/code-snippet',
-		'underscore': 'underscore/underscore',
+	    'underscore': 'underscore/underscore',
 	    'ejs': 'ejs/ejs',
 	    'locales': 'moment-with-locales',
-		/*
-		* happynews js files
-		*/
+	    /*
+	     * HappyNews module js files
+	     */
 	    'eventHandler': 'comment/eventHandler',
 	    'comments': 'comment/comments',
 	    'fileupload': 'comment/fileupload',
 	    'youtube': 'comment/youtube',
 	    'comment': 'comment/comment',
+	    /*
+	     * HappyNews unmodule js files
+	     */
 	    'search': 'article/search',
 	    'article': 'article/article'
 	  },
