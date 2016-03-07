@@ -120,6 +120,8 @@ comments: true
 - 정확한 원리는 아직 공부가 부족하여 모르겠으나 function파라미터로 넘겨받은 놈이 requirejs에서 주는 먼가 하는 놈이고
 - 이놈을 이용해 사용할 모듈을 정의할 수 있다.
 - 시간나면 공부해보자. require찍어보니 `function e(c,d,g)`함수인데 스코프, 프로토타입, 클로저 모르는 내용이 많다
+- [문서](http://requirejs.org/docs/api.html#jsfiles)에 보면 CommonJS형식의 모듈받아오는 것 이라 한다.
+- code-snippet에 보면 require('./view.js')처럼 파일을 명시해 받아오는데 이처럼 requireJS에서는 AMD방식(2번)과 CommonJS방식을 지원한다.
 
 ### 4. RequireJS 설정하기
 
