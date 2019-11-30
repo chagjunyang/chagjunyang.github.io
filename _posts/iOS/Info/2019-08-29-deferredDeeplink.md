@@ -70,8 +70,8 @@ comments: false
 
 ### Branch > 매칭 원리
 
-https://docs.branch.io/resources/matching/
-https://blog.branch.io/the-importance-of-matching-accuracy-in-deep-linking/
+- [원리](https://docs.branch.io/resources/matching/
+https://blog.branch.io/the-importance-of-matching-accuracy-in-deep-linking/)
 
 ### 사파리에서 접근했을 경우
 
@@ -98,7 +98,7 @@ https://blog.branch.io/the-importance-of-matching-accuracy-in-deep-linking/
 
 ## 직접구현 > 웹에서 할일 (브릿지페이지)
 
-<img src="/assets/media/iOS/deferredDeepLink3.png">
+<img src="/assets/media/iOS/deferredDeepLink3.png" width='300'>
 
 - userAgnet를 통해 사파리인지 웹뷰인지 판단
 - 모든 저장된 정보는 특정시간이후 삭제하는게 맞는거같음...

@@ -7,7 +7,7 @@ description: 간단한 Dom, Sax 방식 파서
 comments: false
 ---
 
-Git : https://github.com/chagjunyang/SimpleHTMLParser
+[Git](https://github.com/chagjunyang/SimpleHTMLParser)
 
 ### 개요
 
