@@ -1,13 +1,11 @@
 ---
 layout: post
-title: HTML Parser 만들기
+title: 자기소개
 categories: [iOS]
 tags: [iOS > 정보]
-description: 간단한 Dom, Sax 방식 파서
-comments: false
+description: 소개 및 경력기술
+comments: true
 ---
-
-Git : https://github.com/chagjunyang/SimpleHTMLParser
 
 ### 개요
 
@@ -98,17 +96,17 @@ case .br:
 
 ### 개선 방향
 
-#### 1. 파싱 순서
+1. 파싱 순서
 
 - 어휘분석 -> 구분분석 -> 파스트리 -> attributedString 에서 파스트리가 없어도 가능
 - 어휘분석 -> 구분분석 -> attributedString 구조로 진행
 
-#### 2. 어휘분석
+2. 어휘분석
 
 - 전체 문자열에서 토큰을 구하는게 아닌 입력받은 문자는 Strem으로 넣고 필요할때 Strem에서 정해진 크기단위로 버퍼로 꺼내와 파싱하는 방식으로 변경
 - 오토마타를 설계하여 각각의 문자에대해 1번만 순회하면서 파싱
 
-#### 3. 구문 분석
+3. 구문 분석
 
 - 어휘분석으로부터 이벤트를 전달받을때마다 attributedString을 만들어 최종 result에 append
 - 파싱끝나면 result 반환
@@ -257,8 +255,7 @@ Sax파서를 만들기위해서는 Stream단위 문자열 처리가 필수
 * UInt8 -> 비트로 바꾸어서 아래 조건에 따라 범위 산출
 * 뒤에올 문자열 길이 정해지면 얽어드림
 
-<img src="/assets/media/iOS/parser3.png">
-
+![image.png](/files/2470448692112157611)
 
 #### 이슈
 
@@ -266,7 +263,7 @@ Sax파서를 만들기위해서는 Stream단위 문자열 처리가 필수
 
 ### hex to utf8 logic
 
-<img src="/assets/media/iOS/parser4.png">
+![image.png](/files/2470812669285679399)
 
 ## 코드 리더빌리티 향상
 
