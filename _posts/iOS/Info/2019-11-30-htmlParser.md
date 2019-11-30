@@ -2,7 +2,7 @@
 layout: post
 title: HTML Parser 만들기
 categories: [iOS]
-tags: [iOS > 정보]
+tags: [iOS 정보]
 description: 간단한 Dom, Sax 방식 파서
 comments: false
 ---

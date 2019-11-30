@@ -2,7 +2,7 @@
 layout: post
 title: Deferred Deeplink 조사
 categories: [iOS]
-tags: [iOS > 정보]
+tags: [iOS 정보]
 description: 개념과 앱에 적용하려면 어떻게 해야하는지 정리
 comments: false
 ---
