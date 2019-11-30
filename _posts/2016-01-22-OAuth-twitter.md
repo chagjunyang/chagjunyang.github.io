@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Twitter 인증
-categories: [개인]
-tags: [정보]
+categories: [서버 기술 교육]
+tags: [서버 기술 교육]
 description: spring mvc twitter login
 comments: true
 ---

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: OAuth 1.0 (without OAuth API)
-categories: [개인]
-tags: [정보]
+categories: [서버 기술 교육]
+tags: [서버 기술 교육]
 description: 트위터 uid, scree_name까지
 comments: true
 ---

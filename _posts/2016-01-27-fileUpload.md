@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Jquery, Ajax 파일 업로드 만들기
-categories: [개인]
-tags: [정보]
-description: 허접한 컴포넌트
+categories: [서버 기술 교육]
+tags: [서버 기술 교육]
+description: 샘플 컴포넌트
 comments: true
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: TextArea youtube embed
-categories: [개인]
-tags: [정보] 
-description: 동적으로 iframe제공
+categories: [서버 기술 교육]
+tags: [서버 기술 교육] 
+description: 동적 iframe제공
 comments: true
 ---
 
