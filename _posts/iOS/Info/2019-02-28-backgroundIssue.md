@@ -32,15 +32,15 @@ comments: false
 ```objc
 - (void)startTimerWithTarget:(id)aTarget action:(SEL)aAction validTime:(NSInteger)aValidTime
 {
-mValidTimeSecond = aValidTime;
-mRemaingTimeSecond = mValidTimeSecond;
+    mValidTimeSecond = aValidTime;
+    mRemaingTimeSecond = mValidTimeSecond;
 
-mBgTaskId = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
-[[UIApplication sharedApplication] endBackgroundTask:mBgTaskId];
-}];
+    mBgTaskId = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        [[UIApplication sharedApplication] endBackgroundTask:mBgTaskId];
+    }];
 
-mTimer = [NSTimer timerWithTimeInterval:1 target:aTarget selector:aAction userInfo:nil repeats:YES];
-[[NSRunLoop mainRunLoop] addTimer:mTimer forMode:NSRunLoopCommonModes];
+    mTimer = [NSTimer timerWithTimeInterval:1 target:aTarget selector:aAction userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:mTimer forMode:NSRunLoopCommonModes];
 }
 ```
 
@@ -55,33 +55,33 @@ mTimer = [NSTimer timerWithTimeInterval:1 target:aTarget selector:aAction userIn
 ``` objc
 - (BOOL)isValidBackgroundRemainingTime
 {
-return [[UIApplication sharedApplication] backgroundTimeRemaining] > 10; 
+    return [[UIApplication sharedApplication] backgroundTimeRemaining] > 10; 
 }
 
 - (void)didReceiveTimerEvent:(NSTimer *)aTimer
 {
-[self.barcodeDataController reduceOneSecond];
+    [self.barcodeDataController reduceOneSecond];
 
-if([self isValidBackgroundRemainingTime] == NO)
-{
-[self executeTimeOutAction];
-}
-else if([self applicationIsForegroundState])
-{
-dispatch_async(dispatch_get_main_queue(), ^{
-[UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-[self.certNumberView.progressView setProgress:[self.barcodeDataController currentPercent] animated:YES];
-} completion:^(BOOL finished) {
-}];
-});
+    if([self isValidBackgroundRemainingTime] == NO)
+    {
+        [self executeTimeOutAction];
+    }
+    else if([self applicationIsForegroundState])
+    {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [UIView animateWithDuration:1 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+            [self.certNumberView.progressView setProgress:[self.barcodeDataController currentPercent] animated:YES];
+        } completion:^(BOOL finished) {
+        }];
+        });
 
-[self.certNumberView.timeLabel setText:[self.barcodeDataController remainingTimeText]];
+        [self.certNumberView.timeLabel setText:[self.barcodeDataController remainingTimeText]];
 
-if([self.barcodeDataController isTimeout])
-{
-[self executeTimeOutAction];
-}
-}
+        if([self.barcodeDataController isTimeout])
+        {
+            [self executeTimeOutAction];
+        }
+    }
 }
 ```
 
