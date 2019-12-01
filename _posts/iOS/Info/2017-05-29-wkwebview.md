@@ -10,58 +10,15 @@ comments: false
 
 # UIWebView .vs. WKWebView
 
-| UIWEbView | WKWebView |
-| --- | --- |
-| var scrollView: UIScrollView { get } | var scrollView: UIScrollView { get } |
-|  | var configuration:  |
-|  var delegate: UIWebViewDelegate| var UIDelegate: WKUIDelegate |
-|  | var navigationDelegate: WKNavigationDelegate |
-|  | var backForwardList: WKBackForwardList { get } |
-
-### loding
-| UIWEbView | WKWebView |
-| --- | --- |
-| func loadRequest(request: NSURLRequest) | func loadRequest(request: NSURLRequest)  |
-| func loadHTMLString(string: String, baseURL: NSURL?) | func loadHTMLString(string: String, baseURL: NSURL) |
-| func loadData(data: NSData, MIMEType: String, textEncodingName: String, baseURL: NSURL) | | 
-| | var estimatedProgress: Double { get }|
-| | var hasOnlySecureContent: Bool { get }|
-|func reload()|    func reload()|
-| |     func reloadFromOrigin()|
-|func stopLoading()|func stopLoading()|
-|var request: NSURLRequest? { get }| |
-| | var URL: NSURL? { get }|
-| | var title: String? { get } |
-
-### history
-
-| UIWEbView | WKWebView |
-| --- | --- |
-| | func goToBackForwardListItem(item: WKBackForwardListItem)|
-|func goBack()|func goBack()|
-| func goForward() | func goForward() |
-| var canGoBack: Bool | var canGoBack: Bool |
-| var canGoForward: Bool | var canGoForward: Bool |
-| var loading: Bool | var loading: Bool |
-
-
-### Javascript Evaluation
-
-| UIWEbView | WKWebView |
-| --- | --- |
-| func stringByEvaluatingJavaScriptFromString(script: String) | evaluateJavaScript(javaScriptString: String, completionHandler: ((AnyObject?, NSError?)|
-
-
-### 기타
-
-| UIWEbView | WKWebView |
-| --- | --- |
-| var keyboardDisplayRequiresUserAction: Bool | | 
-| var scalesPageToFit: Bool | |
-| | var allowsBackForwardNavigationGestures: Bool |
-
-
 <img src="/assets/media/iOS/WKWebView1.png">
+
+<img src="/assets/media/iOS/WKWebView2.png">
+
+<img src="/assets/media/iOS/WKWebView3.png">
+
+<img src="/assets/media/iOS/WKWebView4.png">
+
+<img src="/assets/media/iOS/WKWebView5.png">
 
 
 # WKWebView 분석
