@@ -10,7 +10,7 @@ comments: false
 
 # UIWebView .vs. WKWebView
 
-<img src="/assets/media/iOS/WKWebView1.png">
+<img src="/assets/media/iOS/WKWebView11.png">
 
 <img src="/assets/media/iOS/WKWebView2.png">
 
