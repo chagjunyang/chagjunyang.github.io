@@ -17,7 +17,7 @@ comments: false
 * host app : app extension을 호출한 앱
 
 
-<img src="/assets/media/iOS/TodayExtension2.png">
+<img src="/assets/media/iOS/TodayExtension2.png" width='350'/>
 
 ## 라이프 사이클
 <img src="/assets/media/iOS/TodayExtension3.png">
