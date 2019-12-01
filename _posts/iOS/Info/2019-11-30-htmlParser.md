@@ -268,9 +268,6 @@ Sax파서를 만들기위해서는 Stream단위 문자열 처리가 필수
 
 <img src="/assets/media/iOS/parser4.png">
 
-## 코드 리더빌리티 향상
-
-- 단순 switch문이 아닌 dictionary에  
 
 ## 성능 비교
 
