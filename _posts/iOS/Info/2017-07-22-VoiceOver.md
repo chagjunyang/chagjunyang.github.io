@@ -206,7 +206,7 @@ https://support.apple.com/ko-kr/HT204390
 
 #### Voice Over Curtain
 
-실제로 화면을 꺼서, 보이스 오버만 사용해서 앱을 사용할 수 있게 해주는 기능. ~~하드코어 테스트가 가능하다~~
+실제로 화면을 꺼서, 보이스 오버만 사용해서 앱을 사용할 수 있게 해주는 기능.
 
 Voice Over를 사용 하는 상태에서, 세 손가락으로 세번 화면을 탭하면 on/off 할 수 있다.
 
@@ -231,7 +231,6 @@ Xcode > Open Developer Tool > Accessibility Inspector 로 접근 가능하다.
 
 ## 이어폰에서만 소리나게 하기
 
-~~관련 문서를 아직 찾지 못해서... 직접 꽂아보고 뽑아보면서 테스트만 했습니다.아시는 분 있으면 도와주시면 감사하겠습니다ㅠ.ㅠ~~
 
 ### 기본 동작
 * 스피커와 이어폰의 볼륨 수준, 음소거 여부는 분리가 되어 있음. (스피커 음량 != 이어폰 음량)
@@ -239,8 +238,6 @@ Xcode > Open Developer Tool > Accessibility Inspector 로 접근 가능하다.
 * 이어폰에서만 나야하는 경우는 오디오 출력 기기 확인 후, 안내, 출력 소스 전환이 필요할 것 같음. (예를 들어 결제 비밀번호 입력)
 
 ### 오디오 출력 기기 확인
-
-~~만일 이미 구현된 유틸이 있다면 알려주세요...저는 못 찾았네요ㅠㅠ~~
 
 AVAudioSession의 currentRoute를 이용해서 확인 가능합니다.
 https://developer.apple.com/documentation/avfoundation/avaudiosession?language=objc
