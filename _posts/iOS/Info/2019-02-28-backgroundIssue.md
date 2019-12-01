@@ -12,7 +12,7 @@ comments: false
 
 ## 1. Timer 설정값과 OS > Background 유효시간 값이 다름
 
-<img src="/assets/media/iOS/BackgroundIssue1.png">
+<img src="/assets/media/iOS/BackgroundIssue1.png" width='250'>
 
 ### 이슈
 
