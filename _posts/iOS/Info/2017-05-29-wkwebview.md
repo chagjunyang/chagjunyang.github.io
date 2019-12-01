@@ -85,8 +85,6 @@ comments: false
 
 
 ``` objc
-optional
-
 //1. Decides whether to allow or cancel a navigation. (shouldRequest)
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler;
 
@@ -110,7 +108,6 @@ optional
 
 // Called when an error occurs during navigation.
 - (void)webView:(WKWebView *)webView didFailNavigation:(null_unspecified WKNavigation *)navigation withError:(NSError *)error;
-
 ```
 
 
@@ -179,63 +176,63 @@ optional
 //window.alert(), alert() ...
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler
 {
-if (completionHandler)
-{
-UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
-
-[alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"확인", @"")
-style:UIAlertActionStyleDefault
-handler:^(UIAlertAction * _Nonnull action) {
-completionHandler();
-}]];
-
-[self presentViewController:alertController animated:YES completion:nil];
-}
+    if (completionHandler)
+    {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"확인", @"")
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * _Nonnull action) {
+                                                              completionHandler();
+                                                          }]];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 //confirm()
 - (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL))completionHandler
 {
-if (completionHandler)
-{
-UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
-
-[alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"확인", @"")
-style:UIAlertActionStyleDefault
-handler:^(UIAlertAction * _Nonnull action) {
-completionHandler(YES);
-}]];
-
-[alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"취소", @"")
-style:UIAlertActionStyleCancel
-handler:^(UIAlertAction * _Nonnull action) {
-completionHandler(NO);
-}]];
-
-[self presentViewController:alertController animated:YES completion:nil];
-}
-
+    if (completionHandler)
+    {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:UIAlertControllerStyleAlert];
+        
+        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"확인", @"")
+                                                            style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * _Nonnull action) {
+                                                              completionHandler(YES);
+                                                          }]];
+        
+        [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"취소", @"")
+                                                            style:UIAlertActionStyleCancel
+                                                          handler:^(UIAlertAction * _Nonnull action) {
+                                                              completionHandler(NO);
+                                                          }]];
+        
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+    
 }
 
 //window.open()
 - (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures
 {
-WKWebView *sWebView = [[WKWebView alloc] initWithFrame:webView.frame configuration:configuration];
-[sWebView setUIDelegate:self];
-[sWebView setNavigationDelegate:self];
-[sWebView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
-
-[self.view addSubview:sWebView];
-
-return sWebView;
+    WKWebView *sWebView = [[WKWebView alloc] initWithFrame:webView.frame configuration:configuration];
+    [sWebView setUIDelegate:self];
+    [sWebView setNavigationDelegate:self];
+    [sWebView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
+    
+    [self.view addSubview:sWebView];
+    
+    return sWebView;
 }
 
 //window.close()
 - (void)webViewDidClose:(WKWebView *)webView
 {
-[webView removeFromSuperview];
-
-webView = nil;
+    [webView removeFromSuperview];
+    
+    webView = nil;
 }
 ```
 
@@ -246,9 +243,9 @@ webView = nil;
 ``` objc
 - (void)evalTest
 {
-[self.webView evaluateJavaScript:@"document.title" completionHandler:^(id _Nullable result, NSError * _Nullable error) {
-NSLog(@"result is %@", result);
-}];
+    [self.webView evaluateJavaScript:@"document.title" completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+        NSLog(@"result is %@", result);
+    }];
 }
 ```
 
@@ -261,32 +258,32 @@ NSLog(@"result is %@", result);
 ``` objc
 - (void)setupWebView
 {
-WKWebViewConfiguration *sConfiguration  = [[WKWebViewConfiguration alloc] init];
-WKUserContentController *sController    = [[WKUserContentController alloc] init];
-NSString *scriptSource = @"window.webkit.messageHandlers.observe.postMessage('test')";
-
-WKUserScript *sUserScript = [[WKUserScript alloc]
-initWithSource:scriptSource
-injectionTime:WKUserScriptInjectionTimeAtDocumentStart
-forMainFrameOnly:YES];
-
-[sController addScriptMessageHandler:self name:@"observe"];
-[sController addUserScript:sUserScript];
-
-[sConfiguration setUserContentController:sController];
-
-self.webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:sConfiguration];
-
-[self.webView setNavigationDelegate:self];
-[self.webView setUIDelegate:self];
-[self.webView setAllowsLinkPreview:YES];
-[self.webView setAllowsBackForwardNavigationGestures:YES];
-
-[self.view addSubview:self.webView];
-
-NSURLRequest *sRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://10.77.108.24:8080"]];
-
-[self.webView loadRequest:sRequest];
+    WKWebViewConfiguration *sConfiguration  = [[WKWebViewConfiguration alloc] init];
+    WKUserContentController *sController    = [[WKUserContentController alloc] init];
+    NSString *scriptSource = @"window.webkit.messageHandlers.observe.postMessage('test')";
+    
+    WKUserScript *sUserScript = [[WKUserScript alloc]
+                                 initWithSource:scriptSource
+                                 injectionTime:WKUserScriptInjectionTimeAtDocumentStart
+                                 forMainFrameOnly:YES];
+    
+    [sController addScriptMessageHandler:self name:@"observe"];
+    [sController addUserScript:sUserScript];
+    
+    [sConfiguration setUserContentController:sController];
+    
+    self.webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:sConfiguration];
+    
+    [self.webView setNavigationDelegate:self];
+    [self.webView setUIDelegate:self];
+    [self.webView setAllowsLinkPreview:YES];
+    [self.webView setAllowsBackForwardNavigationGestures:YES];
+    
+    [self.view addSubview:self.webView];
+    
+    NSURLRequest *sRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://10.77.108.24:8080"]];
+    
+    [self.webView loadRequest:sRequest];
 }
 
 
@@ -295,7 +292,7 @@ NSURLRequest *sRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:
 
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message
 {
-NSLog(@"message is %@", message.body);
+    NSLog(@"message is %@", message.body);
 }
 ```
 
@@ -303,7 +300,7 @@ NSLog(@"message is %@", message.body);
 
 ``` javascript
 $btn1.click(function(e) {
-window.webkit.messageHandlers.observe.postMessage('test'); 
+    window.webkit.messageHandlers.observe.postMessage('test');
 });
 ```
 

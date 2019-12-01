@@ -46,10 +46,10 @@ https://developer.apple.com/library/archive/documentation/iPhone/Conceptual/iPho
 ``` objc
 __block UIBackgroundTaskIdentifier taskId = UIBackgroundTaskInvalid;
 taskId = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
-NSLog(@"call expiration handler");
-
-[[UIApplication sharedApplication] endBackgroundTask:taskId];
-taskId = UIBackgroundTaskInvalid;
+    NSLog(@"call expiration handler");
+    
+    [[UIApplication sharedApplication] endBackgroundTask:taskId];
+    taskId = UIBackgroundTaskInvalid;
 }];
 
 //Do your work
@@ -63,17 +63,17 @@ taskId = UIBackgroundTaskInvalid;
 ``` objc
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-bgTask = [application beginBackgroundTaskWithName:@"MyTask" expirationHandler:^{
-[application endBackgroundTask:bgTask];
-bgTask = UIBackgroundTaskInvalid;
-}];
-
-dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//Do your work
-
-[application endBackgroundTask:bgTask];
-bgTask = UIBackgroundTaskInvalid;
-});
+    bgTask = [application beginBackgroundTaskWithName:@"MyTask" expirationHandler:^{
+        [application endBackgroundTask:bgTask];
+        bgTask = UIBackgroundTaskInvalid;
+    }];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        //Do your work
+        
+        [application endBackgroundTask:bgTask];
+        bgTask = UIBackgroundTaskInvalid;
+    });
 }
 ```
 
@@ -108,7 +108,7 @@ Appdelegate
 // completionHandler를 들고있다가 호출하면 앱의 사용자 인터페이스가 업데이트되고 새 스냅샷을 가져올 수 있을음 시스템에게 알림
 - (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)(void))completionHandler
 {
-_backgroundURLSessionCompletionHandler = completionHandler;
+    _backgroundURLSessionCompletionHandler = completionHandler;
 }
 ```
 
@@ -118,14 +118,14 @@ ViewControlelr
 
 - (void)URLSessionDidFinishEventsForBackgroundURLSession:(NSURLSession *)session API_AVAILABLE(ios(7.0), watchos(2.0), tvos(9.0)) API_UNAVAILABLE(macos)
 {
-dispatch_async(dispatch_get_main_queue(), ^{
-AppDelegate *sAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-
-if(sAppDelegate.backgroundURLSessionCompletionHandler != nil)
-{
-sAppDelegate.backgroundURLSessionCompletionHandler();
-}
-});
+    dispatch_async(dispatch_get_main_queue(), ^{
+        AppDelegate *sAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        
+        if(sAppDelegate.backgroundURLSessionCompletionHandler != nil)
+        {
+            sAppDelegate.backgroundURLSessionCompletionHandler();
+        }
+    });
 }
 ```
 
@@ -151,23 +151,23 @@ sAppDelegate.backgroundURLSessionCompletionHandler();
 ``` objc
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-[[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
-return YES;
+    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    return YES;
 }
 
 
 -(void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-[API fetchSomeData:^(NSError *aError){
-if(aError != nil)
-{
-completionHandler(UIBackgroundFetchResultNewData);
-}
-else
-{
-completionHandler(UIBackgroundFetchResultNoData);
-}
-}];
+    [API fetchSomeData:^(NSError *aError){
+        if(aError != nil)
+        {
+            completionHandler(UIBackgroundFetchResultNewData);
+        }
+        else
+        {
+            completionHandler(UIBackgroundFetchResultNoData);
+        }
+    }];
 }
 ```
 
