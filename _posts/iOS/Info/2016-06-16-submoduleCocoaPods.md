@@ -2,7 +2,7 @@
 layout: post
 title: Git SubModule and CocoaPods
 categories: [iOS]
-tags: [iOS 정보]
+tags: [iOS 빌드배포]
 description: 사용법 정리
 comments: false
 ---

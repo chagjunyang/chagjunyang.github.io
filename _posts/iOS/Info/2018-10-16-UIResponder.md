@@ -2,7 +2,7 @@
 layout: post
 title: UIResponder
 categories: [iOS]
-tags: [iOS 정보]
+tags: [iOS UIKit]
 description: Responder Chain 구조 파악
 comments: false
 

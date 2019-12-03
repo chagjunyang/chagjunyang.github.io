@@ -2,7 +2,7 @@
 layout: post
 title: UICollectionView Custom 
 categories: [iOS]
-tags: [iOS 정보]
+tags: [iOS UIKit]
 description: override할 메소드 정리
 comments: false
 ---

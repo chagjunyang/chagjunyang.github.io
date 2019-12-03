@@ -2,7 +2,7 @@
 layout: post
 title: 앱 배포 과정 정리
 categories: [iOS]
-tags: [iOS 정보]
+tags: [iOS 빌드배포]
 description: 배포 종류 및 방법 정리
 comments: false
 

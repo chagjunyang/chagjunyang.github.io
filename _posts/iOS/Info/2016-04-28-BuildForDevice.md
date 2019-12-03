@@ -2,7 +2,7 @@
 layout: post
 title: 디바이스에 앱 실행하기
 categories: [iOS]
-tags: [iOS 정보]
+tags: [iOS 빌드배포]
 description: Build for Device
 comments: false
 

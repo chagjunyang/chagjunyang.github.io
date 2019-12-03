@@ -2,7 +2,7 @@
 layout: post
 title: ViewController Life Cycle
 categories: [iOS]
-tags: [iOS 정보]
+tags: [iOS UIKit]
 description: 메모용
 comments: false
 

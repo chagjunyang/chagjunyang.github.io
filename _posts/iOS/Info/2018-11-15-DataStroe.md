@@ -37,16 +37,16 @@ comments: false
 - file system중 캐시 디렉토리에 접근해서 사용
 - NSSearchPathForDirectoriesInDomains(NSCachesDirectory)
 
-### NSDocumentDirectory
+#### NSDocumentDirectory
 
 - 아이튠즈, 아이클라우드에서 백업 가능 
 
 
-### NSLibraryDirectory
+#### NSLibraryDirectory
 
 - 아이튠즈, 아이클라우드에 공유 불가
 
-### NSCachesDirectory
+#### NSCachesDirectory
 
 - 캐시용 디렉토리
 - 메모리가 부족하면 제거될 수 있음
@@ -56,7 +56,7 @@ comments: false
 
 ## KeyChain
 
-[링크](http://chagjunyang.github.io/ios/2018/11/15/KeyChain.html))
+[링크](http://chagjunyang.github.io/ios/2018/11/15/KeyChain.html)
 
 ---
 

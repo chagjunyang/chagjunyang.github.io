@@ -2,7 +2,7 @@
 layout: post
 title: Private Pods
 categories: [iOS]
-tags: [iOS 정보]
+tags: [iOS 빌드배포]
 description: private repository를 만들고 사용하는 방법
 comments: false
 
