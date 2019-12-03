@@ -10,6 +10,7 @@ comments: false
 
 [참고](https://baked-corn.tistory.com/32)
 
+<img src="/assets/media/iOS/LifeCycle1.png">
 
 ### 1. init(coder:)
 
@@ -34,7 +35,10 @@ comments: false
 
 ### 7. didReceiveMemoryWarning()
 
-이건 다른 두레이에 따로 정리
+- 메모리가 부족해 해당 ViewController의 객체들을 비울 기회를 줌.
+- appDelegate: applicationDidReceiveMemoryWarning(_:)
+- didReceiveMemoryWarningNotification 노티로 받을수도있음
+- 애플가이드에 따르면 가능한 빨리 데이터를 비우라고함
 
 ### 8. viewWillDisappear()
 
