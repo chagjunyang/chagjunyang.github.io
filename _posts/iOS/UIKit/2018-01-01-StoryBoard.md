@@ -14,6 +14,7 @@ comments: false
 - Scene은 화면을 구성하고 Segue를 통해 화면간 혹은 스토리보드간 이동을 명세한다
 - Scene을 구성한는 방법은 너무 많아서 Segue에 대해서만 정리
 
+--- 
 
 # Segue
 
@@ -53,7 +54,6 @@ self.presentViewController(nextViewController, animated: true, completion: nil)
 - 사용은 일반 Segue와 똑같지만 생성 방법이 다름
 
 <img src="/assets/media/iOS/storyBaord1.png">
-![image.png](/files/2628244829572970086)
 
 ## 사용법
 
@@ -112,6 +112,6 @@ ex )
 ``` objc
 - (void)perform
 {
-[[self sourceViewController] addChildViewController:[self destinationViewController]];
+    [[self sourceViewController] addChildViewController:[self destinationViewController]];
 }
 ```
