@@ -2,7 +2,7 @@
 layout: post
 title: Story Board
 categories: [iOS]
-tags: [iOS 정보]
+tags: [iOS UIKit]
 description: Segue정리 + unwind segue + custom segue 
 comments: false
 
