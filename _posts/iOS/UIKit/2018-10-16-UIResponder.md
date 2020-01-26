@@ -30,6 +30,19 @@ comments: false
 - hitTest:withEvent:  메세지를 뷰에게 보냅니다.
 - 이런식으로 지정된 터치를 포함하는 가장 깊은 하위 뷰를 찾고 뷰 계층을 탐색합니다. 이 하위 뷰는 터치 이벤트의 첫 번째 응답자가됩니다.
 
+#### HitTest
+
+- UIView에 정의된 메서드
+- HitTest 불려면 아래조건 만족해야함
+    - Hidden = NO
+    - Alpha > 0.01
+    - userInteractionEnabled = YES
+    
+#### FirstResponder
+
+- UIWinodw의 터치이벤트를 가장먼저 처리할 뷰를 지시하는 것
+- 히트테스트와 별개로 터치에대해 firstResponder가 처리하겠다고 하는 것,  
+
 ### 리스폰더 체인 변경
 
 - nextResponder속성을 변경하여 체인구조변경가능
