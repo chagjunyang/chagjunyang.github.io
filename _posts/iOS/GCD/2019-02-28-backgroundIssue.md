@@ -2,7 +2,7 @@
 layout: post
 title: Background 유효시간 정리
 categories: [iOS]
-tags: [iOS 정보]
+tags: [GCD]
 description: 정리
 comments: false
 

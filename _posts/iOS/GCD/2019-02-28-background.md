@@ -2,7 +2,7 @@
 layout: post
 title: Bckground 동작 정리
 categories: [iOS]
-tags: [iOS 정보]
+tags: [GCD]
 description: 정의 및 테스트방법 
 comments: false
 
